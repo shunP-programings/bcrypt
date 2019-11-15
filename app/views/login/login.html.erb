@@ -1,0 +1,11 @@
+<h1>ログイン</h1>
+
+<%= form_with scope: :session, local:  true do |f|%>
+  <div class="form-group">
+  <%= f.label :uid, 'ユーザーID' %>
+  <%= f.text_field :uid, class: 'form-control', id: 'session_uid'%></div>
+  <div class="form-group">
+  <%= f.label :password, 'パスワード' %>
+  <%= f.password_field :password, class: 'form-control', id: 'session_password'%></div>
+  <%= f.submit 'ログインする', class: 'btn btn-primary'%>
+<% end %>
